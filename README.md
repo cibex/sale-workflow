@@ -39,6 +39,7 @@ addon | version | maintainers | summary
 [sale_manual_delivery](sale_manual_delivery/) | 16.0.1.0.0 |  | Create manually your deliveries
 [sale_mrp_bom](sale_mrp_bom/) | 16.0.1.0.0 |  | Allows define a BOM in the sales lines.
 [sale_order_archive](sale_order_archive/) | 16.0.1.0.0 |  | Archive Sale Orders
+[sale_order_currency_rate](sale_order_currency_rate/) | 16.0.1.0.0 |  | Currency Rate in Sale Order
 [sale_order_general_discount](sale_order_general_discount/) | 16.0.1.0.0 |  | General discount per sale order
 [sale_order_invoice_amount](sale_order_invoice_amount/) | 16.0.1.0.0 |  | Display the invoiced and uninvoiced total in the sale order
 [sale_order_line_date](sale_order_line_date/) | 16.0.1.0.0 |  | Adds a commitment date to each sale order line.
@@ -52,6 +53,7 @@ addon | version | maintainers | summary
 [sale_order_qty_change_no_recompute](sale_order_qty_change_no_recompute/) | 16.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Prevent recompute if only quantity has changed in sale order line
 [sale_order_revision](sale_order_revision/) | 16.0.1.0.1 |  | Keep track of revised quotations
 [sale_order_type](sale_order_type/) | 16.0.1.0.6 |  | Sale Order Type
+[sale_packaging_default](sale_packaging_default/) | 16.0.1.0.0 | [![yajo](https://github.com/yajo.png?size=30px)](https://github.com/yajo) | Set a default product packaging and simplify its usage in sales orders
 [sale_partner_incoterm](sale_partner_incoterm/) | 16.0.1.0.0 |  | Set the customer preferred incoterm on each sales order
 [sale_partner_selectable_option](sale_partner_selectable_option/) | 16.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Sale Partner Selectable Option
 [sale_procurement_group_by_line](sale_procurement_group_by_line/) | 16.0.1.0.0 |  | Base module for multiple procurement group by Sale order
