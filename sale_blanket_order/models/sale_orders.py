@@ -22,8 +22,8 @@ class SaleOrder(models.Model):
             line.blanket_order_line.remaining_qty < 0.0 for line in self.order_line
         )
 
-    def button_confirm(self):
-        res = super().button_confirm()
+    def action_confirm(self):
+        res = super().action_confirm()
         for order in self:
             if order._check_exchausted_blanket_order_line():
                 raise ValidationError(

@@ -8,8 +8,8 @@
         <field name="model">sale.blanket.order</field>
         <field name="arch" type="xml">
             <tree
-                decoration-info="state in ('draft', 'to_approve')"
-                decoration-muted="state in ('expired')"
+                decoration-info="state == 'draft'"
+                decoration-muted="state == 'expired'"
             >
                 <field name="name" />
                 <field name="user_id" />
@@ -63,7 +63,7 @@
                     <field
                         name="state"
                         widget="statusbar"
-                        statusbar_visible="draft,open,expired"
+                        statusbar_visible="draft,open,done,expired"
                     />
                 </header>
                 <sheet>
@@ -122,7 +122,7 @@
                         <page string="Order Lines" name="order_lines">
                             <field
                                 name="line_ids"
-                                attrs="{'readonly': [('state', 'in', ('open','expired'))]}"
+                                attrs="{'readonly': [('state', 'in', ('open','done','expired'))]}"
                                 widget="section_and_note_one2many"
                             >
                                 <tree editable="bottom">
@@ -295,9 +295,9 @@
                     </notebook>
                 </sheet>
                 <div class="oe_chatter">
-                    <field name="message_follower_ids" widget="mail_followers" />
-                    <field name="activity_ids" widget="mail_activity" />
-                    <field name="message_ids" widget="mail_thread" />
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
                 </div>
             </form>
         </field>
