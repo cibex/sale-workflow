@@ -14,7 +14,7 @@ class SaleOrderLine(models.Model):
         default=9999,
     )
 
-    visible_sequence = fields.Integer(
+    visible_sequence = fields.Char(
         "Line Number",
         help="Displays the sequence of the line in the sale order.",
         compute="_compute_visible_sequence",
