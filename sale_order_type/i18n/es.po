@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-19 21:55+0000\n"
-"PO-Revision-Date: 2026-05-10 16:52+0000\n"
+"PO-Revision-Date: 2026-06-27 05:36+0000\n"
 "Last-Translator: Ed-Spain <eduamoros@gmail.com>\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "Language: es\n"
@@ -212,6 +212,12 @@ msgid "Route"
 msgstr "Ruta"
 
 #. module: sale_order_type
+#: model:ir.model.fields,field_description:sale_order_type.field_res_partner__effective_pricelist_id
+#: model:ir.model.fields,field_description:sale_order_type.field_res_users__effective_pricelist_id
+msgid "Sale Effective Pricelist"
+msgstr ""
+
+#. module: sale_order_type
 #: model:ir.model.fields,field_description:sale_order_type.field_account_invoice_report__sale_type_id
 #: model:ir.model.fields,field_description:sale_order_type.field_res_partner__sale_type
 #: model:ir.model.fields,field_description:sale_order_type.field_res_users__sale_type
@@ -261,6 +267,18 @@ msgid "Sales Order Types"
 msgstr "Tipos de pedido de venta"
 
 #. module: sale_order_type
+#: model:ir.model.fields,field_description:sale_order_type.field_sale_order_type__team_id
+#: model_terms:ir.ui.view,arch_db:sale_order_type.sot_sale_order_type_search_view
+msgid "Sales Team"
+msgstr "Equipo de venta"
+
+#. module: sale_order_type
+#: model:ir.model.fields,field_description:sale_order_type.field_sale_order_type__user_id
+#: model_terms:ir.ui.view,arch_db:sale_order_type.sot_sale_order_type_search_view
+msgid "Salesperson"
+msgstr "Vendedor"
+
+#. module: sale_order_type
 #: model:ir.model.fields,field_description:sale_order_type.field_sale_order__picking_policy
 #: model:ir.model.fields,field_description:sale_order_type.field_sale_order_type__picking_policy
 #: model_terms:ir.ui.view,arch_db:sale_order_type.sot_sale_order_type_search_view
@@ -286,6 +304,13 @@ msgstr "Tipo de pedido de venta"
 #: model_terms:ir.ui.view,arch_db:sale_order_type.sot_sale_order_type_search_view
 msgid "Warehouse"
 msgstr "Almacén"
+
+#. module: sale_order_type
+#: model_terms:ir.ui.view,arch_db:sale_order_type.res_partner_sale_type_form_view
+msgid ""
+"When creating a Sales Order, above pricelist will be replaced by the one set "
+"on the sales order type:"
+msgstr ""
 
 #~ msgid "Analytic Account"
 #~ msgstr "Cuenta Analítica"
