@@ -38,8 +38,12 @@ class SaleOrderLine(models.Model):
 
     @api.depends("price_unit", "discount")
     def _compute_price_final(self):
+        dp = self.env["decimal.precision"].precision_get("Product Price")
         for line in self:
-            line.price_final = line._get_discounted_price()
+            # We use float_round to avoid 1.999999999999998
+            line.price_final = float_round(
+                line._get_discounted_price(), precision_digits=dp
+            )
 
     @api.depends("price_final")
     def _compute_price_unit(self):
@@ -82,7 +86,6 @@ class SaleOrderLine(models.Model):
         return super()._compute_discount()
 
     def _add_precomputed_values(self, vals_list):
-        # To be removed if odoo/odoo#278444 is merged
         for vals in vals_list:
             if "price_unit" in vals and "technical_price_unit" not in vals:
                 # Absurd value to not match any of the possible creation values
